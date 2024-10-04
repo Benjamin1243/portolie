@@ -1,0 +1,82 @@
+@use "../mixins";
+@use "../variabels";
+//her kommer css til twoboxes
+.twoBoxes{
+   
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    color: variabels.$chill-white;
+    font-family: variabels.$boxes-font;
+    //boxen til venstre
+    &__img{
+        filter: grayscale(60%);
+        max-height:600px ;
+        transition: 0.5s;
+        &:hover{
+            border-radius: 2%;
+        }
+    }
+    &__left{
+        background-color: variabels.$dark-grey;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: start;
+        
+       
+     
+        //her styler jeg inde i boxen
+        padding-left: 1rem;
+        max-height:600px ;
+
+
+    }
+    &__textDiv{
+        grid-row: 2/3;
+        max-width: 80%;
+    }
+    @for $i from 1 through 3 {
+        &__textDiv p:nth-child(#{$i}) {
+            @include mixins.delayShow($i - 0.5);
+            @debug $i
+        }
+      }
+      
+    &__text{
+       font-size: 1.1em;
+       
+        padding-top: 2rem;
+        grid-column: 1/2;
+        padding-left: 1rem;
+       
+        
+    }
+    &__heading{
+        padding-top: 2rem;
+        text-align: left;
+        
+       
+    }
+    //her er koden til linket i bunden
+    &__link{
+        text-decoration: none;
+        color: variabels.$chill-white;
+        align-self: flex-start;
+        margin-top: auto;
+        padding-bottom: 3rem;
+       
+       
+       
+        transition: 0.2s;
+        i{
+            transition: 0.5s;
+        }
+     &:hover{
+        color: variabels.$hover-red;
+        i{
+            rotate: -90deg;
+        }
+     }
+    }
+   
+}

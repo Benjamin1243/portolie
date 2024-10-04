@@ -1,0 +1,29 @@
+@use "../mixins";
+@use "../variabels";
+
+.heroDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    &__img{
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+        
+        filter: grayscale(40%)
+    }
+&__heading{
+    grid-row: 1/-1;
+    background-color: rgba(0, 0, 0, 0.353);
+    max-height:100px;
+    width: 100%;
+    font-family: variabels.$heroHeading;
+    text-align: center;
+    color: variabels.$chill-white;
+    padding-top: 1rem;
+    z-index: 2;
+    font-size: 3rem;
+    grid-column: 1/-1;
+}
+
+}
+

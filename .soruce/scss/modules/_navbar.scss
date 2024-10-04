@@ -1,0 +1,20 @@
+
+@use "../mixins";
+@use "../variabels";
+.navList{
+    
+    @include mixins.navBar(100%, flex, 2rem); //en mixin der giver den flex
+    padding-left: 10em;
+    padding-bottom: 0.5em;
+    
+    border-bottom: 1px solid variabels.$nav-black;
+    &__listItem{
+        list-style: none;
+    }
+    &__link{
+        text-decoration: none;
+        color: variabels.$nav-black;;
+        font-family: variabels.$nav-font;
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,23 @@
+
+@mixin navBar($width,$display, $gap){
+    width: $width;
+    display: $display;
+    gap: $gap;
+}
+//det her er den animation der gør at tingene slider ind
+@mixin delayShow($delay){
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+   @debug $delay;
+   max-height: 100px;
+   transition: 1s;
+   opacity: 0;
+    animation-delay:$delay+s;
+  
+}
+@keyframes example {
+    from {margin-left: 100%; }
+    to {margin-left: 0; opacity: 1;}
+  }

@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+@keyframes example {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+.navList {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding-left: 10em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #252422;
+}
+.navList__listItem {
+  list-style: none;
+}
+.navList__link {
+  text-decoration: none;
+  color: #252422;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5em;
+}
+
+.heroDiv {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.heroDiv__img {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  filter: grayscale(40%);
+}
+.heroDiv__heading {
+  grid-row: 1/-1;
+  background-color: rgba(0, 0, 0, 0.353);
+  max-height: 100px;
+  width: 100%;
+  font-family: "Mukta", sans-serif;
+  text-align: center;
+  color: #fffcf2;
+  padding-top: 1rem;
+  z-index: 2;
+  font-size: 3rem;
+  grid-column: 1/-1;
+}
+
+.twoBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  color: #fffcf2;
+  font-family: "Quicksand", sans-serif;
+}
+.twoBoxes__img {
+  filter: grayscale(60%);
+  max-height: 600px;
+  transition: 0.5s;
+}
+.twoBoxes__img:hover {
+  border-radius: 2%;
+}
+.twoBoxes__left {
+  background-color: #403d39;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  padding-left: 1rem;
+  max-height: 600px;
+}
+.twoBoxes__textDiv {
+  grid-row: 2/3;
+  max-width: 80%;
+}
+.twoBoxes__textDiv p:nth-child(1) {
+  animation-name: example;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  max-height: 100px;
+  transition: 1s;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+.twoBoxes__textDiv p:nth-child(2) {
+  animation-name: example;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  max-height: 100px;
+  transition: 1s;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+.twoBoxes__textDiv p:nth-child(3) {
+  animation-name: example;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  max-height: 100px;
+  transition: 1s;
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+.twoBoxes__text {
+  font-size: 1.1em;
+  padding-top: 2rem;
+  grid-column: 1/2;
+  padding-left: 1rem;
+}
+.twoBoxes__heading {
+  padding-top: 2rem;
+  text-align: left;
+}
+.twoBoxes__link {
+  text-decoration: none;
+  color: #fffcf2;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-bottom: 3rem;
+  transition: 0.2s;
+}
+.twoBoxes__link i {
+  transition: 0.5s;
+}
+.twoBoxes__link:hover {
+  color: #eb5e28;
+}
+.twoBoxes__link:hover i {
+  rotate: -90deg;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+#wrapper {
+  margin: 0 auto;
+}
