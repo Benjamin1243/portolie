@@ -34,7 +34,8 @@
         max-width: 80%;
 
     }
-    @for $i from 1 through 3 {
+    //det her er animations loopet, der går sådan at teksten kommer ind fra siden
+    @for $i from 1 through 4 {
         &__textDiv p:nth-child(#{$i}) {
             @include mixins.delayShow($i - 0.5);
             @debug $i;
