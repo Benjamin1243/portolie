@@ -157,7 +157,7 @@ header {
   grid-template-columns: 1fr 1.1fr;
   color: #fffcf2;
   font-family: "Mukta", sans-serif;
-  line-height: 1.7rem;
+  line-height: 2rem;
 }
 .twoBoxes__img {
   filter: grayscale(60%);
@@ -168,7 +168,7 @@ header {
   background-color: #403d39;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: start;
   padding-left: 1rem;
   max-height: 600px;
@@ -182,7 +182,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 110px;
+  max-height: 120px;
   transition: 1s;
   opacity: 0;
   animation-delay: 0.5s;
@@ -192,7 +192,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 110px;
+  max-height: 120px;
   transition: 1s;
   opacity: 0;
   animation-delay: 1.5s;
@@ -202,7 +202,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 110px;
+  max-height: 120px;
   transition: 1s;
   opacity: 0;
   animation-delay: 2.5s;
@@ -212,13 +212,13 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 110px;
+  max-height: 120px;
   transition: 1s;
   opacity: 0;
   animation-delay: 3.5s;
 }
 .twoBoxes__text {
-  font-size: 1.1em;
+  font-size: 1.3rem;
   opacity: 0;
   padding-top: 2rem;
   grid-column: 1/2;
@@ -399,6 +399,16 @@ header {
 @media only screen and (max-width: 1000px) {
   .socials__icon {
     font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .socials__socialBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .socials__icon {
+    font-size: 7rem;
   }
 }
 .footer {

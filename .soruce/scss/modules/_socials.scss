@@ -42,3 +42,15 @@
         }
     }
 }
+@media only screen and (max-width: 1000px) {
+    .socials{
+        &__socialBox{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__icon{
+            font-size: 7rem;
+        }
+    }
+}
