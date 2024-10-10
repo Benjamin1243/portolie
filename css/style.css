@@ -175,47 +175,68 @@ header {
 }
 .twoBoxes__textDiv {
   grid-row: 2/3;
-  max-width: 80%;
+  max-width: 90%;
+  height: 300px;
 }
 .twoBoxes__textDiv p:nth-child(1) {
   animation-name: example;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 120px;
+  max-height: 130px;
   transition: 1s;
   opacity: 0;
   animation-delay: 0.5s;
+}
+@media only screen and (max-width: 1200px) {
+  .twoBoxes__textDiv p:nth-child(1) {
+    max-height: 160px;
+  }
 }
 .twoBoxes__textDiv p:nth-child(2) {
   animation-name: example;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 120px;
+  max-height: 130px;
   transition: 1s;
   opacity: 0;
   animation-delay: 1.5s;
+}
+@media only screen and (max-width: 1200px) {
+  .twoBoxes__textDiv p:nth-child(2) {
+    max-height: 160px;
+  }
 }
 .twoBoxes__textDiv p:nth-child(3) {
   animation-name: example;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 120px;
+  max-height: 130px;
   transition: 1s;
   opacity: 0;
   animation-delay: 2.5s;
+}
+@media only screen and (max-width: 1200px) {
+  .twoBoxes__textDiv p:nth-child(3) {
+    max-height: 160px;
+  }
 }
 .twoBoxes__textDiv p:nth-child(4) {
   animation-name: example;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 120px;
+  max-height: 130px;
   transition: 1s;
   opacity: 0;
   animation-delay: 3.5s;
+}
+@media only screen and (max-width: 1200px) {
+  .twoBoxes__textDiv p:nth-child(4) {
+    max-height: 160px;
+  }
 }
 .twoBoxes__text {
   font-size: 1.3rem;
@@ -223,11 +244,12 @@ header {
   padding-top: 2rem;
   grid-column: 1/2;
   padding-left: 1rem;
-  max-width: 500px;
+  max-width: 600px;
 }
 .twoBoxes__heading {
   padding-top: 2rem;
   text-align: left;
+  padding-left: 1rem;
 }
 .twoBoxes__link {
   text-decoration: none;
@@ -261,6 +283,14 @@ header {
   .twoBoxes__right {
     grid-row: 1/-1;
     grid-column: 1/-1;
+  }
+  .twoBoxes__text {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .twoBoxes__textDiv {
+    max-height: auto;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -401,7 +431,7 @@ header {
     font-size: 5rem;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
   .socials__socialBox {
     flex-direction: column;
     justify-content: center;
