@@ -14,7 +14,7 @@
         filter: grayscale(40%)
     }
     &__box{
-        padding-top: 10rem;
+        padding-top: 3rem;
         z-index: 2;
         grid-row: 1/-1;
         grid-column: 1/-1;
@@ -60,5 +60,22 @@
     }
 }
 
+}
+
+@media only screen and (max-width: 1400px) {
+    .heroDiv{
+        
+        &__img{
+            height: 1000px;
+        }
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .heroDiv{
+        
+        &__img{
+            height: 800px;
+        }
+    }
 }
 

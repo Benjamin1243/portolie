@@ -1,6 +1,14 @@
 @use "../mixins";
 @use "../variabels";
 //her kommer css til twoboxes
+//her kommer en ændring til når skærmen er større
+
+@media only screen and (min-width: 1500px) {
+    
+        .twoBoxes{
+            grid-template-columns: 1fr 1.5fr;
+        }
+    }
 .twoBoxes{
    
     display: grid;
@@ -48,6 +56,7 @@
         padding-top: 2rem;
         grid-column: 1/2;
         padding-left: 1rem;
+      max-width: 500px;
        
         
     }
@@ -80,3 +89,21 @@
     }
    
 }
+//her kommer en ændring til når skærmen er mindre
+@media only screen and (max-width: 1200px) {
+    
+        .twoBoxes{
+            grid-template-columns: 1fr;
+            &__left{
+           place-self: center;
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+            background-color: rgba(128, 128, 128, 0.312);
+            z-index: 3;
+        }
+        &__right{
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+        }
+        }
+    }

@@ -1,7 +1,7 @@
 
 @use "../mixins";
 @use "../variabels";
-
+@use 'sass:color';
 
 //I dette dokument er både css'en til naven, men også til a tagget i toppen
 .indexButton{
@@ -21,20 +21,20 @@ header{
     z-index: 100;
 }
 .navList{
-   
+    border-bottom: 0px solid black;
     
     @include mixins.navBar(100%, flex, 0); //en mixin der giver den flex
   
-    
+    transition: 0.4s;
     align-items: center;
    
-    border-bottom: 1px solid beige;
+   
 
         align-items: center;
 
        
         
-        background-color: variabels.$chill-white;
+        background-color: variabels.$navbarBackground;
         display: flex;
         gap: 3rem;
         
@@ -56,12 +56,14 @@ header{
         color: variabels.$nav-black;;
         font-family: variabels.$heroHeading;
         font-size: 1.5em;
-        color: variabels.$nav-black;
+        color: variabels.$chill-white;
         transition: 0.2s;
 
         
         &:hover{
-           font-weight: 900;
+           font-weight: 700;
+           color: #fffcf2;
+
         }
     }
 }
@@ -69,12 +71,23 @@ header{
 .navList--scroll{
     
     
-    
+    opacity: .7;
        
+       border: 0px solid transparent;
+       background-color: color.adjust(variabels.$navbarBackground, $lightness: 0%);
    
-        background-color: #fffcf2c3;
-    border-bottom: 0px solid black;
     &:hover{
         background-color: #fffcf2;
     }
+    .navList{
+    &__link{
+        opacity: 1  ;
+        color: white;
+    }
+   
+}}
+
+.navList--scroll:hover .navList__link{
+    color: black;
+    
 }

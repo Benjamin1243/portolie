@@ -20,3 +20,14 @@ color: variabels.$nav-black;
         font-family: variabels.$heroHeading;
     }
 }
+@media only screen and (max-width: 1200px) {
+    .chosenProjects{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .chosenProjects{
+        width: 95%;
+    }
+}
+
