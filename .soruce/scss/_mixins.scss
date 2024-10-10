@@ -11,13 +11,16 @@
     animation-fill-mode: forwards;
     overflow: hidden;
    @debug $delay;
-   max-height: 120px;
+   max-height: 130px;
    transition: 1s;
    opacity: 0;
     animation-delay:$delay+s;
+    @media only screen and (max-width: 1200px){
+        max-height: 160px;
+    }
   
 }
 @keyframes example {
-    from {margin-left: 100%;  }
-    to {margin-left: 0; opacity: 1;}
+    from {margin-left: 100%;   }
+    to {margin-left: 0; opacity: 1; }
   }
