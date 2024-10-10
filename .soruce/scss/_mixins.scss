@@ -11,7 +11,7 @@
     animation-fill-mode: forwards;
     overflow: hidden;
    @debug $delay;
-   max-height: 100px;
+   max-height: 110px;
    transition: 1s;
    opacity: 0;
     animation-delay:$delay+s;
