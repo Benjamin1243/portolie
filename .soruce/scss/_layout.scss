@@ -28,6 +28,10 @@ color: variabels.$nav-black;
 @media only screen and (max-width: 600px) {
     .chosenProjects{
         width: 95%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr;
+        justify-items: center;
     }
 }
 

@@ -14,7 +14,8 @@
     display: grid;
     grid-template-columns: 1fr 1.1fr;
     color: variabels.$chill-white;
-    font-family: variabels.$boxes-font;
+    font-family: variabels.$heroHeading;
+    line-height: 1.7rem;
     //boxen til venstre
     &__img{
         filter: grayscale(60%);
@@ -106,4 +107,32 @@
             grid-column: 1/-1;
         }
         }
+    }
+
+    @media only screen and (max-width: 600px) {
+    .twoBoxes{
+        &__left{
+            height: 100%;
+            gap: 0.1rem;
+            text-align: center;
+            padding-left: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.576);
+            
+        }
+        &__heading {
+            padding-bottom: 0;
+            text-align: center;
+        }
+        &__textDiv{
+            max-width: 100%;
+        }
+        &__text{
+            max-width: 100%;
+            padding-left: 0;
+        }
+        &__right{
+            background-color: black;
+        }
+    }
     }

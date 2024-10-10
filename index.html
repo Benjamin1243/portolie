@@ -12,7 +12,7 @@
 
 <body>
     <div id="wrapper">
-        <a class="indexButton">Benjamin Jasek Smith</a>
+        <a class="indexButton">BENJAMIN JASEK SMITH</a>
         <header>
 
             <nav>
@@ -33,7 +33,7 @@
                     <h1 class="twoBoxes__heading">Benjamin Jasek Smith</h1>
                     <div class="twoBoxes__textDiv">
                         <p class="twoBoxes__text">
-                            Jeg er 18 år gammel, kommer fra rødovre og går lige nu på roskilde tekniske skole
+                            Jeg er 18 år gammel, kommer fra Rødovre og går til hverdag på Roskilde tekniske skole. Hvor jeg går på en eud om webudvikling.
                         </p>
                         <p class="twoBoxes__text">
                             Jeg har en stor interrese indenfor webudvikling, og valgte derfor at starte på webudvikler
@@ -50,13 +50,20 @@
                 </div>
 
                 <div class="twoBoxes__right">
-                    <img src="images/person.JPG" class="twoBoxes__img" alt="Et potræt billede af mig">
-                </div>
+                    <picture >
+                        <source media="(min-width: 600px)" srcset="images/person.jpg">
+                        
+                        <img class="twoBoxes__img" class="heroDiv__img" src="images/personMobil.jpg">
+                      </picture>                </div>
             </div>
 
             <article class="myProjects">
                 <div class="heroDiv">
-                    <img src="images/projectshow.jpg" class="heroDiv__img" alt="">
+                    <picture class="heroDiv__img">
+                        <source media="(min-width: 600px)" srcset="images/projectshow.jpg">
+                        
+                        <img class="heroDiv__img" src="images/projectshowMobile.jpg">
+                      </picture>
                     <div class="heroDiv__box">
                         <h2 class="heroDiv__heading"><span class="blackmark">MINE</span> PROJEKTER</h2>
                         <p class="heroDiv__introText">Jeg har lavet en del projekter genne tiden både i skolen og

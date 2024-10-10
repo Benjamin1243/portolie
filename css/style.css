@@ -13,7 +13,7 @@
   }
 }
 .indexButton {
-  font-family: "Dancing Script", cursive;
+  font-family: "Mukta", sans-serif;
   text-align: center;
   display: block;
   padding: 1rem 0;
@@ -136,6 +136,17 @@ header {
     height: 800px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .heroDiv__heading {
+    font-size: 3em;
+  }
+  .heroDiv__heading .blackmark {
+    color: rgba(255, 255, 255, 0.496);
+  }
+  .heroDiv__img {
+    height: 1400px;
+  }
+}
 @media only screen and (min-width: 1500px) {
   .twoBoxes {
     grid-template-columns: 1fr 1.5fr;
@@ -145,7 +156,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   color: #fffcf2;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Mukta", sans-serif;
+  line-height: 1.7rem;
 }
 .twoBoxes__img {
   filter: grayscale(60%);
@@ -170,7 +182,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 100px;
+  max-height: 110px;
   transition: 1s;
   opacity: 0;
   animation-delay: 0.5s;
@@ -180,7 +192,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 100px;
+  max-height: 110px;
   transition: 1s;
   opacity: 0;
   animation-delay: 1.5s;
@@ -190,7 +202,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 100px;
+  max-height: 110px;
   transition: 1s;
   opacity: 0;
   animation-delay: 2.5s;
@@ -200,7 +212,7 @@ header {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  max-height: 100px;
+  max-height: 110px;
   transition: 1s;
   opacity: 0;
   animation-delay: 3.5s;
@@ -249,6 +261,30 @@ header {
   .twoBoxes__right {
     grid-row: 1/-1;
     grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .twoBoxes__left {
+    height: 100%;
+    gap: 0.1rem;
+    text-align: center;
+    padding-left: 0;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.576);
+  }
+  .twoBoxes__heading {
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .twoBoxes__textDiv {
+    max-width: 100%;
+  }
+  .twoBoxes__text {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .twoBoxes__right {
+    background-color: black;
   }
 }
 .project {
@@ -331,7 +367,7 @@ header {
 }
 .socials {
   background-color: #403d39;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 .socials:hover .socials__heading {
   color: #eb5e28;
@@ -346,12 +382,12 @@ header {
 }
 .socials__socialBox {
   display: flex;
-  margin-top: 5rem;
+  margin-top: 3rem;
   justify-content: center;
   gap: 5rem;
 }
 .socials__icon {
-  font-size: 15rem;
+  font-size: 8rem;
   color: #fffcf2;
   transition: 0.4s;
 }
@@ -368,7 +404,7 @@ header {
 .footer {
   padding-top: 1.5rem;
   padding-bottom: 3rem;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Mukta", sans-serif;
   background-color: #fffcf2;
 }
 .footer__list {
@@ -459,6 +495,10 @@ img {
 @media only screen and (max-width: 600px) {
   .chosenProjects {
     width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    justify-items: center;
   }
 }
 #wrapper {
