@@ -1,0 +1,109 @@
+@use "../mixins";
+@use "../variabels";
+//her kommer css til twoboxes
+//her kommer en ændring til når skærmen er større
+
+@media only screen and (min-width: 1500px) {
+    
+        .twoBoxes{
+            grid-template-columns: 1fr 1.5fr;
+        }
+    }
+.twoBoxes{
+   
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    color: variabels.$chill-white;
+    font-family: variabels.$boxes-font;
+    //boxen til venstre
+    &__img{
+        filter: grayscale(60%);
+        max-height:600px ;
+        transition: 0.5s;
+       
+    }
+    &__left{
+        background-color: variabels.$dark-grey;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: start;
+        
+       
+     
+        //her styler jeg inde i boxen
+        padding-left: 1rem;
+        max-height:600px ;
+
+
+    }
+    &__textDiv{
+        grid-row: 2/3;
+        max-width: 80%;
+
+    }
+    //det her er animations loopet, der går sådan at teksten kommer ind fra siden
+    @for $i from 1 through 4 {
+        &__textDiv p:nth-child(#{$i}) {
+            @include mixins.delayShow($i - 0.5);
+            @debug $i;
+        }
+      }
+      
+    &__text{
+       font-size: 1.1em;
+       opacity: 0;
+        padding-top: 2rem;
+        grid-column: 1/2;
+        padding-left: 1rem;
+      max-width: 500px;
+       
+        
+    }
+    &__heading{
+        padding-top: 2rem;
+        text-align: left;
+        
+       
+    }
+    //her er koden til linket i bunden
+    &__link{
+        text-decoration: none;
+        color: variabels.$chill-white;
+        align-self: flex-start;
+        margin-top: auto;
+        padding-bottom: 3rem;
+       
+       
+       
+        transition: 0.2s;
+        i{
+            transition: 0.5s;
+        }
+     &:hover{
+        color: variabels.$hover-red;
+        i{
+            rotate: -90deg;
+        }
+     }
+    }
+   
+}
+//her kommer en ændring til når skærmen er mindre
+@media only screen and (max-width: 1200px) {
+    
+        .twoBoxes{
+            grid-template-columns: 1fr;
+            &__left{
+           place-self: center;
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+            background-color: rgba(128, 128, 128, 0.312);
+            z-index: 3;
+        }
+        &__right{
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+        }
+        }
+    }
