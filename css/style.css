@@ -317,6 +317,11 @@ header {
   .twoBoxes__right {
     background-color: black;
   }
+  .twoBoxes__link {
+    padding-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
 }
 .project {
   background-color: rgba(0, 0, 0, 0.429);
