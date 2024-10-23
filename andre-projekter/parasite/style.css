@@ -1,0 +1,640 @@
+/*Her impotere jeg google fonts og andre css dokumenter*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("lightbox.css");
+/*Standard css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+p{
+    max-width: 585px;
+}
+img{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+main{
+    
+    max-width: 1020px;
+    margin: 0 auto;
+    font-family: "Oswald", sans-serif;
+}
+body{
+    background-image: url(img/parasite-imgs/fullscreen-bg.jpg);
+    color: #ffffff;
+    font-size: 1.25em;
+}
+/*her fjerner jeg nogle elementer, som kun skal vises på mobil versionen*/
+.logo_mobil_i_header{
+    display: none;
+    margin: 0 auto;
+}
+.mobilOverskrifterH2{
+    display: none;
+}
+/*Den her kode gør at tingene ikke går ud over hianden*/
+#wrapper{
+   
+    overflow: hidden;
+}
+/*Koden til navigationen*/
+nav{
+    position: fixed;
+    width: 100%;
+    font-size: 1.25;
+    background-color: #0000008d;
+    
+}
+
+nav ul{
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    padding: 1em 0;
+    
+}
+nav ul li{
+    list-style: none;
+    
+}
+nav ul li.ikoner{
+    grid-column: 6 / 7;
+    width: 100%;
+    
+   
+    
+}
+nav ul li.ikoner a i{
+    padding: 0 2%;
+    
+   
+    
+}
+nav ul li a{
+ font-family: "Open Sans", sans-serif;
+ text-decoration: none;
+ color: #ffffff;
+ 
+}
+nav ul li a.aktuelleSide{
+   font-weight: bold;
+    
+   }
+   nav ul li a:hover{
+    font-weight: bold;
+     
+    }
+    i.menuBarIkon{
+        grid-row: 1/2;
+        grid-column:1/2;
+        order:3;
+        width: 20px;
+        display: none;
+        
+        margin: 1em 10px 0 0;
+        font-size: 20px;
+       }
+   /*Nu kommer vi til main*/
+   /*Jeg har lavet en specefik class til main på forsiden, fordi den er speciel i forhold til de andre, og det samme med wrapper*/
+   main.forside{
+    max-width: 100%;
+    grid-column: 1/2;
+    grid-row: 3/4; /*Denne kode gør at footeren lægger oppe på baggrundsbillede*/
+    margin: 0;
+   }
+   #wrapperForside{
+    display: grid;
+    max-width: 100%;
+   }
+   
+   
+   div.stortStartbillde {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: center;
+    
+   }
+  
+
+   /*Den første her, gælder for dem begge, og derefter giver jeg dem en sperat afstand så de ikke står ovenpå hianden*/
+   div.stortStartbillde button{
+    width: 10.6em;
+   height: 41px;
+   font-size: 30px;
+   grid-row: 1/2;
+   grid-column:1/2;
+   align-self: end;
+   font-family: "Open Sans", sans-serif;
+   display: none;
+   box-shadow: 2px 2px rgba(0, 0, 0, 0.307);
+ 
+   
+   }
+   div.stortStartbillde button:first-of-type {
+   margin-bottom: 8em;
+   }
+   div.stortStartbillde button:last-of-type {
+    margin-bottom: 6em;
+    }
+  
+   div.stortStartbillde picture.stortStartbilldePicture{
+    width: 100%;
+    grid-row: 1/2;
+    grid-column:1/2;
+   }
+   .logoPicture{
+    grid-row: 1/2;
+    grid-column:1/2;
+    place-self: center;
+    padding-bottom: 17em;
+    max-width: 475px;
+   }
+   
+   /*Her kommer koden til footeren*/
+   /*Den første footer gælder for alle footere */
+   footer{
+    max-width: 100%;
+    width: 100%;
+    bottom: 0;
+    background-color: #000000aa;
+    
+    position: fixed;
+    
+    
+   }
+   .forsideFooterDiv{
+    margin: 0 auto;
+    max-width: 510px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding:  1em 0;
+    gap: 4em;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+   }
+   .forsideFooterDiv img:last-child{
+    min-width: 197px;
+   }
+   .forsideFooterDiv img:nth-child(1), .forsideFooterDiv img:nth-child(2){
+    min-width: 100px;
+   }
+   /*Den anden footer bruges kun til forsiden fordi den skal have nogle specielle indstillinger*/
+   footer.forsideFooter{
+    grid-column: 1/2;
+    grid-row: 3/4; /*Denne kode gør at footeren lægger oppe på baggrundsbillede*/
+    align-self: end;
+    position: relative;    
+   }
+
+   /*Nu kommer vi til gallerySite*/
+   .imageGallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    margin: 10em 0;
+    gap: 1em;
+   }
+   .billedeGruppe{
+    display: grid;
+   }
+   .billedeGruppe p, .billedeGruppe img{
+    grid-area: 1/1/-1/-1;
+   }
+   .billedeGruppe p{
+    background-color: #00000095;
+    order:1;
+    align-self: end;
+    font-size: 12px;
+   opacity: 0;
+   transition: 1s;
+   text-align: center;
+   }
+    .billedeGruppe:hover p{
+       opacity: 1;
+   }
+   
+   
+   
+
+   /*Nu kommer vi til synopsis siden*/
+   .synopsisGrid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-bottom: 5em;
+    margin-top: 5em;
+   }
+   
+   .synopsisGridSection{
+    display: grid;
+    grid-template: repeat(1, auto)/ repeat(5, 1fr);
+   
+    row-gap: 1em;
+    column-gap: 4em;
+   }
+   .synopsisGrid img{
+    grid-column: 1/ -1;
+    place-self: center;
+    width: 626px;
+    padding: 4em 0;
+   }
+   .synopsisGrid section h2 {
+    font-size: 30px;
+    font-weight: normal;
+    padding-bottom: 1em;
+    grid-column: 1/4;
+   }
+   .synopsisGridText{
+    grid-column: 1/4;
+   }
+   .synopsisGrid section {
+    grid-column: 1/4;
+   }
+   .synopsisGrid section p {
+    font-weight: 400;
+    padding-bottom: 1.25em;
+   }
+   .synopsisGrid .synopsisGridTable{
+    grid-column: 4/6;
+    
+   }
+  
+   .synopsisGrid table tr th{
+    font-weight: 300;
+    padding-bottom: 3em;
+    
+    text-align: left;
+   }
+   .synopsisGrid table tr td{
+    font-weight: 300;
+    padding-bottom: 3em;
+    
+   }
+   /*Det her gør at det kun er de første td'er og th'er der har padding right */
+   .synopsisGrid table tr td:first-child{
+    padding-right: 8em;
+   }
+   .synopsisGrid table tr th:first-child{
+    padding-right: 8em;
+   }
+
+   /*nu kommer vi til cast siden*/
+   .castIndhold{
+    margin-top: 6em;
+    padding-bottom: 10em;
+   }
+   .castIndhold section{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 6.6em 0 ;
+   }
+   .castIndhold section img{
+    grid-area: 1/1/2/5;  
+    }
+  
+   .castIndhold section div.tekstVedSidenAfBillede{
+    grid-area: 1/6/2/13;   
+    max-width: 100%;
+   }
+   .castIndhold section div.tekstVedSidenAfBillede h3 {
+    font-size: 2em;
+    padding-bottom: 0.6em;
+    
+   }
+   .castIndhold section div.tekstVedSidenAfBillede p{
+    font-size: 0.8em;
+    width: 576.35px;
+    padding: 0 0 1.5em 0;
+   }
+  
+   
+   /*Nu laver jeg koden som gør at nogle af sektionsne er til højre og andre er til venstre*/
+   
+   
+section.hoejreJusteret img{
+    grid-area: 1/9/2/13; 
+}
+.castIndhold section.hoejreJusteret div.tekstVedSidenAfBillede{
+    grid-area: 1/1/2/8;   
+    max-width: 100%;
+   }
+   
+   /*Nu laver jeg mediaquerien til ipadden*/
+   @media only screen and (max-width: 769px) {
+    
+    main{
+        max-width: 599px;
+        width: 100%;
+    }
+
+    /*Først starter vi med forsiden(index.html)*/
+    nav.navBarForside{
+        background-color: black;
+    }
+    div.stortStartbillde button{
+      display: block;
+       }
+    div.stortStartbillde{
+      padding-top: 3em;
+        }
+      
+        .logoPicture{
+        max-width: 578px;
+        padding-top: 6em;
+         }
+   
+   
+    /*Nu kommer vi til gallery_siden*/
+    .galleryMain{
+        width: 730px;
+        max-width: 730px;
+    }
+    
+    .billedeGruppe p{
+        opacity: 1;
+        background-color: transparent;
+        padding-top: 1em;
+        font-size: 16px;
+        text-align: left;
+    }
+    .billedeGruppe {
+        display: block;
+    }
+    /*Nu kommer vil til synopsisSiden*/
+    .synopsisGrid img{
+        max-width: 400px;
+    }
+    .synopsisGrid{
+        max-width: 597px;
+        margin: 5em 0 10em 0;
+    }
+       .synopsisGrid section h2 {
+        font-size: 24px;
+        order: -2;
+        font-weight: normal;
+        padding-bottom: 1em;
+        grid-column: 1/-1;
+       }
+       .synopsisGrid div.synopsisGridTable{
+        grid-column: 1/-1;
+        order: -1;
+       }
+       .synopsisGridText{
+        grid-column: 1/-1;
+        max-width: 595px;
+       }
+       .synopsisGridText p{
+        text-align: justify;
+        max-width: 595px;
+       }
+       .synopsisGridSection{
+        justify-items: center;
+       }
+       /*Nu kommer jeg til "cast" media qury tablet versionen */
+       .castIndhold section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:repeat(3, auto) ;
+        row-gap: 32px;
+        max-width: 520px;
+        margin: 0 auto;
+        padding-bottom: 132px;
+        
+       }
+      
+       .castIndhold section img{
+        grid-area: 1/1/2/-1;  
+        justify-self: center;
+        }
+      
+       .castIndhold section div.tekstVedSidenAfBillede{
+        grid-area: 2/1/3/-1 ;   
+       
+       }
+       .castIndhold section div.tekstVedSidenAfBillede h3 {
+        font-size: 2em;
+        padding-bottom: 0.4em;
+        
+       }
+       .castIndhold section div.tekstVedSidenAfBillede p{
+        font-size: 0.8em;
+        width: 100%;
+        padding: 0 0 1em 0;
+       }
+       /*Hernede fjerner jeg koden til de højreJusteret sektions*/
+       section.hoejreJusteret img{
+        grid-area: 1/1/2/-1; 
+    }
+    .castIndhold section.hoejreJusteret div.tekstVedSidenAfBillede{
+        grid-area: 2/1/3/-1;   
+        max-width: 100%;
+       }
+    }
+    @media only screen and (max-width: 400px) {
+        /*Jeg laver en speciel hedader class som kun er headeren på forsiden, fordi den skal være speciel i forhold til de andre*/
+       
+      
+        img.logo_mobil_i_header{
+            width: 280px;
+            display: block;
+            grid-area: 1/1/-1/-1;
+            padding-top: 1.8em;
+            
+        }
+        header{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            
+        }
+        nav{
+            height: 100%;
+            background-color: #35532F;
+            z-index: 30;
+            display: grid;
+            align-items: center;
+        }
+        nav ul{
+            grid-auto-flow: row;
+            
+            grid-template-rows: repeat(5, 1fr);
+            height: 318px;
+            row-gap: 2em;
+            margin-bottom: 15em;
+            justify-items: center;
+        }
+        nav ul li:last-child{
+           text-align: center;
+           margin-top: 2em;
+           grid-column: 1/ -1;
+        }
+        nav ul li:last-child a{
+            margin: 0 1em;
+         }
+         /*"invisible" classen bruges til at skjule menuen gennem javascript*/
+         .invisible{
+            display: none;
+         }
+         /*Det her er en anden class som bruges til at placere li'erne på den rigtige måde*/
+           .placeLi{
+            grid-column: 1 / -1;
+           
+            
+           }
+        main{
+           max-width: 286px;
+            width: 100%;
+            
+        }
+        /*først starter jeg med at fjerne top menuen */
+       nav.navBarForside{
+        background-color: #35532F;
+       }
+        i.menuBarIkon{
+        display: block;
+        justify-self: end;
+        grid-area: 1/1/-1/-1;
+        height: auto;
+        z-index: 40;
+        position: fixed;
+        font-size: 1.5em;
+        margin-right: 1em;
+        color: #ffffff;
+        /* margin: 1em 0.5em 0 auto; */
+    }
+
+        .forsideFooterDiv{
+            margin: 0 auto;
+            max-width: 100%;
+            gap: 2.5em;
+           
+        }
+       
+
+        .forsideFooterDiv img:last-child{
+            min-width: 90px;
+            padding-right: 1em;
+           }
+           .forsideFooterDiv img:nth-child(1), .forsideFooterDiv img:nth-child(2){
+            min-width: 60px;
+            padding-left: 1em ;
+           }
+           #wrapperForside footer{
+            display: none;
+            
+        }
+        
+        /*Nu laver jeg lidt settings på forside billedet*/
+        .logoPicture{
+            width: 272px;
+            padding-top: 1em;
+            place-self: start center;
+             }
+             div.stortStartbillde{
+                padding-top: 1px;
+             }
+             div.stortStartbillde button{
+                width: 200px;
+                font-size: 0.8em;
+                margin: 0;
+                margin-bottom: 10em;
+            }
+            div.stortStartbillde button:last-of-type {
+                margin-bottom: 7em;
+                }
+                div.stortStartbillde button:first-of-type {
+                    margin-bottom: 4em;
+                    }
+                
+               /*Nu kommer vi til gallery siden */
+
+               /*Jeg starter lige med at fjerne top-margin på image galleyry, fordi den ikke passer på mobil versionen*/
+               .galleryMain{
+                width: 280px;
+                max-width: 280px;
+            }
+               .imageGallery{
+                margin-top: 1.6em;
+               }
+               .mobilOverskrifterH2{
+                font-family: "Oswald", sans-serif;
+                display: block;
+                font-weight: 100;
+                text-align: center;
+                margin-top: 1em;
+               }
+               /*Nu kommer vi til synopsis Siden */
+               .synopsisGrid img{
+                display: none;
+
+               }
+               .synopsisGrid .synopsisGridSection{
+                gap: 0em;
+               }
+               .synopsisGrid .synopsisGridSection h2{
+                font-size: 1em;
+                padding: 0;
+
+               }
+               .synopsisGrid .synopsisGridSection p{
+                text-align: left;
+                width: 280px;
+
+               }
+               .synopsisGridSection{
+                justify-items: start;
+               }
+               .synopsisGrid .synopsisGridSection div.synopsisGridTable{
+                width: 100%;
+                }
+                .synopsisGrid .synopsisGridSection table{
+                    width: 100%;
+                    margin: 1.6em 0 2.4em 0;
+                    }
+              
+               .synopsisGrid .synopsisGridSection table tr th,  .synopsisGrid .synopsisGridSection table tr td{
+                padding: 0;
+                font-weight: 100;
+                text-align: left;
+                width: 100%;
+               
+               }
+               .synopsisGrid .synopsisGridSection table tr{
+                margin-bottom: 1em;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+               }
+               .synopsisGrid .synopsisGridSection table tr:nth-child(1){
+                margin-bottom: 2em;
+                display: flex;
+                flex-direction: column;
+               }
+               .synopsisGrid .synopsisGridSection table tr:nth-child(2){
+                margin-bottom: 0;
+                
+               }
+               /*Den her kode gør bare at nogle af td'erne og et af th'erne får fed font-weight*/
+               .synopsisGrid .synopsisGridSection table tr:nth-child(3) td, .synopsisGrid .synopsisGridSection table tr:nth-child(4) td, .synopsisGrid .synopsisGridSection table tr:nth-child(5) td,.synopsisGrid .synopsisGridSection table tr th:nth-child(2) {
+                font-weight: 500;
+                
+               }
+               /*Nu kommer vi til Cast siden*/
+               .castIndhold{
+                margin: 2.4em 0;
+               }
+               .castIndhold section{
+                padding-bottom: 2.3em;
+               }
+               .moreLess{
+                display: block;
+            }
+            
+        }
