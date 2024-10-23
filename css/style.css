@@ -543,6 +543,7 @@ img {
     width: 95%;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
     justify-items: center;
   }
 }
