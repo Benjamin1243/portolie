@@ -1,0 +1,37 @@
+@use "variabels";
+@use "modules/hero";
+@use "modules/project";
+@use "modules/navbar";
+@use "modules/footer";
+@use "reset";
+@use "layout";
+
+//her er der nogle specifikke regler, som er nogle modifiers på en måde
+.heroDiv__introText{
+    margin-bottom: 2rem;
+}
+.heroDiv__box{
+    background-color: rgb(60, 59, 59);
+    padding-bottom: 3rem;
+}
+.chosenProjects{
+    gap: 3rem;
+}
+.blackmark{
+    color: variabels.$chill-white;
+}
+.chosenProjects__h3{
+    grid-column: 1/-1;
+    font-family: variabels.$heroHeading;
+    text-align: center;
+    color: variabels.$hover-red;
+    font-weight: 800;
+   
+    z-index: 2;
+    font-size: 2rem;
+    
+    
+}
+.chosenProjects{
+    grid-template-rows: auto;
+}

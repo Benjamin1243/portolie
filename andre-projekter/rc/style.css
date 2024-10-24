@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url(topmenu.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+}
+header{
+    width: 80%;
+    margin: 0 auto;
+}
+p{
+    font-family: "Mulish", sans-serif;
+       
+}
+h2, h3{
+    font-family: "Playfair Display", serif;
+    
+}
+#wrapper{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+header .headerImg{
+    width: 40%;
+    margin: 0 auto;
+}
+.grid-contianer_forside{
+    display: grid;
+    
+
+}
+/*Lige i den her kode, gør jeg at facts og de andre bokse lægger oppe på hianden,*/
+.grid-contianer_forside img, .grid-contianer_forside div.facts, .tekst_i_boks{
+    
+    grid-area: 1/1/2/2;
+    }
+    /*Nu kommer al koden hvor jeg styler facts'boksen og tekst'boksen */
+.grid-contianer_forside div.facts{
+    background-color: rgb(255, 255, 255);
+    width: 19.2%;
+    height: 88.8%;
+    justify-self: end;
+    align-self: center;
+    margin-right: 2em;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+/*Jeg giver lige det first child i facts boksen en margin top, så den ikke ligger midt i toppen*/
+.grid-contianer_forside div.facts p:first-child
+{
+  padding-top: 25%;
+  padding-bottom: 10%;
+  
+}
+
+.grid-contianer_forside div.facts h2
+{
+    line-height: 1em;
+   font-size: 3.5em;
+   font-weight: 400;
+   padding-bottom: 0.2em;
+  
+}
+.grid-contianer_forside div.facts p{
+    font-size: 0.875em;
+}
+.grid-contianer_forside div.facts hr{
+    width: 20%;
+    border: 1px solid rgba(0, 0, 0, 0.108);
+    margin: 1em auto;
+    
+ }
+ .grid-contianer_forside div.facts a{
+   text-decoration: none;
+   font-size: 0.875em;
+   text-align: center;
+   font-family: "Mulish", sans-serif;
+   color: black;
+   font-weight: 400;
+   padding-bottom: 0.5em;
+}
+.grid-contianer_forside div.facts a:hover{
+    text-decoration:solid
+    
+ }
+
+.tekst_i_boks{
+background-color: rgb(255, 255, 255);
+align-self: end;
+width: 70%;
+height: 167px;
+}
+.tekst_i_boks h2{
+ text-align: center;
+ font-size: 1.625em;
+ padding-bottom: 0.5em;
+}
+.tekst_i_boks p{
+font-size: 0.875em;
+text-align: center;
+        
+ font-weight: 700;
+}
+.lidtMindreEndMain{
+    width: 94%;
+    margin: 0 auto;
+}
+.storHR{
+    border: 1px solid black;
+    margin-top: 2em;
+}
+
+.aktiviteter_article{
+    margin: 2em 0;
+   
+}
+.aktiviteter_article h2{
+    text-align: center;
+    font-weight: 100;
+    font-size: 2em;
+    color: #3a3a3a;
+
+}
+.grid-container{
+    padding-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 2em;
+    margin-bottom: 10em;
+    row-gap: 5em;
+}
+.aktivitet_boks{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1em;
+    
+}
+.aktivitet_boks img{
+  grid-area: 1/1/2/2;
+}
+.p_upon_image_in_aktivite_boks{
+    grid-area: 1/1/2/2;
+    order: 2;
+    background-color: white;
+    width: 15em;
+    font-size: 0.875em;
+    font-weight: 800;
+    
+    align-self: end;
+}
+.aktivitet_boks h2{
+   
+    font-size: 1.5em;
+    text-align: left;
+    
+}
+.aktivitet_boks a{
+    text-decoration: none;
+    font-family: "Mulish", sans-serif;
+    color: #3a3a3a;
+    grid-area: 3/1/4/-1;
+}
+/*Nu kommer hover effekterne*/
+
+footer{
+    background-color: #EDEDED;
+}
+footer h2{
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 100;
+    padding-top: 1em;
+}
+.grid-container_footer{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 4em 0;
+    flex-wrap: wrap;
+ 
+    
+}
+.grid-container_footer div.footer_billede_boks{
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1em;
+}
+.grid-container_footer div a{
+    text-decoration: none;
+    font-size: 0.875em;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    color: black;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+   
+    
+}
+
+
